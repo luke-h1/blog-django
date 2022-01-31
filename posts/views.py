@@ -26,4 +26,3 @@ def post(request, post_id):
     'post': post
   }
   return render(request, 'posts/post.html', context)
-

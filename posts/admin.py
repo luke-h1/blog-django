@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Author
+from .models import Post
 
-class AuthorAdmin(admin.ModelAdmin):
-  list_display = ('id', 'name', 'email')
-  list_display_links = ('id', 'name')
-  search_fields = ('name',)
+class PostAdmin(admin.ModelAdmin):
+  list_display = ('id', 'title')
+  list_display_links = ('id', 'title')
+  search_fields = ('title','intro')
   list_per_page = 25
   
-admin.site.register(Author, AuthorAdmin)
+admin.site.register(Post, PostAdmin)
