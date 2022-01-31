@@ -20,7 +20,7 @@ def index(request):
 
 
 def post(request, post_id):
-  post = get_object_or_404(Post, pk=post_id).filter(is_published=True)
+  post = get_object_or_404(Post, pk=post_id)
   context = {
     'post': post
   }

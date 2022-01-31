@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} | {{ post.title }} {% endblock %}
+
+
+{% block content %}
+
+<header>
+  <h1>{{ post.title }}</h1>
+
+  <p class='blog-meta'>
+    <time datetime="{{ post.publish_date }}">
+      Published {{post.publish_date}} ago
+    </time>
+  </p>
+  <p>
+  </p>
+  <img alt="{{post.title}}" src="{{ post.photo_main.url }}" style='max-width: 100%; margin-bottom: 5rem;' />
+  <article>
+    {{ post.body }}
+  </article>
+
+</header>
+
+{% endblock %}
