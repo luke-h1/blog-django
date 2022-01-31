@@ -2,7 +2,7 @@ from django.db import models
 from datetime import datetime 
 from author.models import Author
 
-class Posts(models.Model):
+class Post(models.Model):
   author = models.ForeignKey(Author, on_delete=models.DO_NOTHING)
   title = models.CharField(max_length=80)
   intro = models.CharField(max_length=80)
