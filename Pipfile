@@ -7,6 +7,7 @@ name = "pypi"
 python-dotenv = "~=0.19.1"
 django = "~=4.0.1"
 postgres = "~=4.0"
+pillow = "~=9.0.0"
 
 [dev-packages]
 
