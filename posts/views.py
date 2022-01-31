@@ -4,7 +4,6 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Post
 
 def index(request):
-  
   posts = Post.objects.order_by('-publish_date').filter(is_published=True)
   
   paginator = Paginator(posts, 6)

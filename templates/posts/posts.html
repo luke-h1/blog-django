@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} | Posts {% endblock %}
+
+{% block content %}
+
+<h1>Posts</h1>
+<ul class="list">
+  {% if posts %}
+    {% for post in posts  %}
+  <li>
+    <div class="title">
+      <a href="{% url 'post' post.id %}">{{ post.title }}</a>
+    </div>
+    <p class="excerpt">{{ post.intro }}</p>
+    <!-- <p class="tags">
+      <span>
+        <a href="#">Tag</a>
+      </span>
+      <span>
+        <a href="#">Tag</a>
+      </span>
+      <span>
+        <a href="#">Tag</a>
+      </span>
+    </p> -->
+  </li>
+  {% endfor %}
+  {% endif %}
+
+
+{% endblock %}

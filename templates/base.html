@@ -10,12 +10,13 @@
   <link rel='stylesheet' href="{% static 'css/global.css' %}" />
 </head>
 <body>
+  <div class='container'>
   <!-- Nav -->
   {% include 'partials/_navbar.html' %}
 
 
   {% block content %} {% endblock %}
-
+</div>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
